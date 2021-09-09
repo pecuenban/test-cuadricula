@@ -1,0 +1,4 @@
+<div class="contenedor">
+  <app-tarjeta *ngFor="let imagen of imagenes" [alto]="imagen.alto" [imagen]="imagen.url" [ancho]="imagen.ancho"
+    [titulo]="imagen.titulo" [class]="'ancho_'+imagen.ancho+' alto_'+imagen.alto"></app-tarjeta>
+</div>
