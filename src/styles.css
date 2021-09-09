@@ -16,16 +16,19 @@ body {
   position: relative;
 }
 .ancho_1 {
-  width: calc(100% / 4 - 20px);
+  width: calc(100% / 5 - 20px);
 }
 .ancho_2 {
-  width: calc(100% / 4 * 2 - 20px);
+  width: calc(100% / 5 * 2 - 20px);
 }
 .ancho_3 {
-  width: calc(100% / 4 * 3 - 20px);
+  width: calc(100% / 5 * 3 - 20px);
 }
 .ancho_4 {
-  width: calc(100% / 4 * 4 - 20px);
+  width: calc(100% / 5 * 4 - 20px);
+}
+.ancho_5 {
+  width: calc(100% / 5 * 5 - 20px);
 }
 /*
 .alto_1 {

@@ -18,4 +18,18 @@ h3 {
   bottom: 0;
   margin: auto;
   z-index: 1;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+div:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.2;
 }
