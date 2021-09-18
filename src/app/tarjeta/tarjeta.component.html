@@ -3,5 +3,5 @@
   <h3 *ngIf="!pulsado">{{ titulo }}</h3>
   <img [src]="imagen" />
   <button (click)="ant()" *ngIf="pulsado"><</button>
-  <button (click)="sig()" *ngIf="pulsado">></button>
+  <button class="der" (click)="sig()" *ngIf="pulsado">></button>
 </div>
