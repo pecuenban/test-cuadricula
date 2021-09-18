@@ -1,4 +1,16 @@
 <div class="contenedor">
-  <app-tarjeta *ngFor="let imagen of imagenes" [alto]="imagen.alto" [imagen]="imagen.url" [ancho]="imagen.ancho"
-    [titulo]="imagen.titulo" [class]="'ancho_'+imagen.ancho+' alto_'+imagen.alto"></app-tarjeta>
+  <app-tarjeta
+    *ngFor="let imagen of imagenes; index as i"
+    [alto]="imagen.alto"
+    [imagen]="imagen.url"
+    [ancho]="imagen.ancho"
+    [titulo]="imagen.titulo"
+    [class]="'ancho_' + imagen.ancho + ' alto_' + imagen.alto"
+    [pulsado]="imagen.pulsado"
+    (despulsado)="despulsar($event, i)"
+    (click)="pulsar(i)"
+    (anterior)="anterior($event, i)"
+    (siguiente)="siguiente($event, i)"
+  ></app-tarjeta>
 </div>
+<button (click)="cargarImagenes()">More</button>
