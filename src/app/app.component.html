@@ -1,4 +1,4 @@
-<div class="contenedor">
+<div class="contenedor" (scroll)="onScroll($event)">
   <app-tarjeta
     *ngFor="let imagen of imagenes; index as i"
     [alto]="imagen.alto"
@@ -13,4 +13,4 @@
     (siguiente)="siguiente($event, i)"
   ></app-tarjeta>
 </div>
-<button (click)="cargarImagenes()">More</button>
+<!--<button (click)="cargarImagenes()">More</button>-->

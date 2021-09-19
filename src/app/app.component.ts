@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -7,7 +7,17 @@ import { Component, OnInit, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  name = 'Angular ' + VERSION.major;
+  @HostListener('scroll', ['$event'])
+  onScroll(event: any) {
+    console.log('ENRTRA');
+    // visible height + pixel scrolled >= total height
+    if (
+      event.target.offsetHeight + event.target.scrollTop >=
+      event.target.scrollHeight
+    ) {
+      this.cargarImagenes();
+    }
+  }
 
   constructor(private http: HttpClient) {}
   url;

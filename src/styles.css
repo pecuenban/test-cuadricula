@@ -2,9 +2,23 @@
 body {
   margin: 0;
 }
+/*.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 100%;
+}*/
 .contenedor {
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
 }
 .ancho_1 {
   width: calc(100% / 5);
